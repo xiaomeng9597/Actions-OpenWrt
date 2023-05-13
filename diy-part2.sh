@@ -172,6 +172,12 @@ sed -i "s|.img.gz|_FOL+SFE.img.gz|g" package/luci-app-amlogic/root/etc/config/am
 # 4.Set the download path of the kernel in your github.com repository
 sed -i "s|opt/kernel|BuildARMv8|g" package/luci-app-amlogic/root/etc/config/amlogic
 
+# php8
+#rm -rf feeds/packages/lang/php8
+#svn co https://github.com/openwrt/packages/trunk/lang/php8 feeds/packages/lang/php8
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=8.2.3/g' feeds/packages/lang/php8/Makefile
+sed -i 's/PKG_HASH:=.*/PKG_HASH:=b9b566686e351125d67568a33291650eb8dfa26614d205d70d82e6e92613d457/g' feeds/packages/lang/php8/Makefile
+
 #添加argon-config 使用 最新argon
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 rm -rf feeds/luci/themes/luci-theme-argon
