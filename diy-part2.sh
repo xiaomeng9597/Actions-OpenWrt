@@ -10,7 +10,6 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
-sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/' feeds/luci/collections/luci/Makefile
 
 
 #移除不用软件包    
@@ -25,6 +24,8 @@ rm -rf package/lean/luci-theme-argon
 rm -rf themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
 
+
+sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/' feeds/luci/collections/luci/Makefile
 
 
 #添加额外软件包
