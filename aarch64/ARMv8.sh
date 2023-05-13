@@ -8,3 +8,5 @@ rm -rf package/luci-theme-argon
 rm -rf package/lean/luci-theme-argon
 rm -rf themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-argon
+
+sed -i 's/luci-theme-bootstrap/luci-theme-opentomcat/' feeds/luci/collections/luci/Makefile
