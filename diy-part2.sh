@@ -139,6 +139,8 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/taskd package/taskd
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-lib-xterm package/luci-lib-xterm
 sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
 
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
+
 wget -P feeds/luci/applications/luci-app-ttyd/luasrc/view/terminal/terminal.htm https://xiaomeng9597.github.io/terminal.htm
 
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
