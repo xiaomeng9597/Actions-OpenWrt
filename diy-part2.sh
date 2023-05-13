@@ -16,6 +16,14 @@ rm -rf feeds/luci/applications/luci-app-wrtbwmon
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/packages/net/mosdns
 
+
+rm -rf package/luci-theme-argon
+rm -rf package/lean/luci-theme-argon
+rm -rf themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
+
+
+
 #添加额外软件包
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
