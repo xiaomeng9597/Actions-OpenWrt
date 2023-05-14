@@ -155,7 +155,7 @@ sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
 
 svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
 
-wget -P feeds/luci/applications/luci-app-ttyd/luasrc/view/terminal/terminal.htm https://xiaomeng9597.github.io/terminal.htm
+wget -P feeds/luci/applications/luci-app-ttyd/luasrc/view/terminal https://xiaomeng9597.github.io/terminal.htm
 
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
