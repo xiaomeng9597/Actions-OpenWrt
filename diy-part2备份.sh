@@ -176,12 +176,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced package/luci-app-advance
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 #修改晶晨宝盒默认配置
 
-# qBittorrent (use cmake)
-#sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=4.4.0/g' feeds/packages/net/qBittorrent/Makefile
-#sed -i 's/PKG_HASH:=.*/PKG_HASH:=da240744c6cc5953d7c4d298a02a0cf36d2c8897931819f1e6459bd5270a7c5c/g' feeds/packages/net/qBittorrent/Makefile
-#sed -i '41i\		+qt5-sql \\' feeds/packages/net/qBittorrent/Makefile
-cp -rf $GITHUB_WORKSPACE/general/qBittorrent/patches feeds/packages/net/qBittorrent
-cp -f $GITHUB_WORKSPACE/general/qBittorrent/Makefile feeds/packages/net/qBittorrent/Makefile
+# qBittorrent
 sed -i 's/zh/zh_CN/g' feeds/luci/applications/luci-app-qbittorrent/root/etc/config/qbittorrent
 
 # 1.Set the download repository of the OpenWrt files to your github.com
