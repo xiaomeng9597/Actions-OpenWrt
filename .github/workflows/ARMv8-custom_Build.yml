@@ -84,10 +84,10 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
+        echo "tagdate=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
 #        echo "::set-env name=useVersionInfo::$useVersionInfo"
 #        echo "::set-env name=DATE::$(date "+%Y-%m-%d %H:%M:%S")"
-        echo "tagdate=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
-        
+       
 
     - name: Build firmware
       id: build
