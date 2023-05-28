@@ -86,6 +86,8 @@ jobs:
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
 #        echo "::set-env name=useVersionInfo::$useVersionInfo"
 #        echo "::set-env name=DATE::$(date "+%Y-%m-%d %H:%M:%S")"
+        echo "tagdate=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
+        
 
     - name: Build firmware
       id: build
@@ -103,7 +105,7 @@ jobs:
         sudo chmod +x ./respawn_mks.sh
         sudo ./respawn_mks.sh
         cd /opt/openwrt_packit
-        sudo wget $(curl -s https://api.github.com/repos/xiaomeng9597/Actions-OpenWrt/releases/102981808 | grep browser_download_url | cut -d '"' -f 4)
+        sudo wget https://github.com/haiibo/OpenWrt/releases/download/ROOTFS_PLUS/openwrt-armvirt-64-generic-rootfs.tar.gz
         chmod +x $GITHUB_WORKSPACE/$Update_Ver_SH
         sudo $GITHUB_WORKSPACE/$Update_Ver_SH
         sudo cp $GITHUB_WORKSPACE/scripts/whoami ./
@@ -192,7 +194,7 @@ jobs:
       with:
         name: R${{ env.DATE }} for ${{ env.FILE_NAME }}
         allowUpdates: true
-        tag: ${{ env.FILE_NAME }}
+        tag: ${{ env.FILE_NAME }}-${{ env.tagdate }}
         commit: master
         token: ${{ secrets.RELEASES_TOKEN }}
         body: |
