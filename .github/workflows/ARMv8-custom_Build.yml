@@ -95,7 +95,7 @@ jobs:
         echo $PWD
         sudo mkdir /opt/kernel
         cd /opt/kernel
-        sudo wget $(curl -s https://api.github.com/repos/HoldOnBro/Actions-OpenWrt/releases/69472888 | grep browser_download_url | cut -d '"' -f 4)
+        sudo wget $(curl -s https://api.github.com/repos/breakings/OpenWrt/releases/96762572 | grep browser_download_url | cut -d '"' -f 4)
         #sudo cp $GITHUB_WORKSPACE/BuildARMv8/* /opt/kernel/
 
         cd /opt
