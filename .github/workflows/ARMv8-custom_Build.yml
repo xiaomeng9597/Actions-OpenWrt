@@ -105,7 +105,7 @@ jobs:
         sudo chmod +x ./respawn_mks.sh
         sudo ./respawn_mks.sh
         cd /opt/openwrt_packit
-        sudo wget https://github.com/haiibo/OpenWrt/releases/download/ROOTFS_PLUS/openwrt-armvirt-64-generic-rootfs.tar.gz
+        sudo wget https://github.com/haiibo/OpenWrt/releases/download/ROOTFS_PLUS2/openwrt-armvirt-64-generic-rootfs.tar.gz
         chmod +x $GITHUB_WORKSPACE/$Update_Ver_SH
         sudo $GITHUB_WORKSPACE/$Update_Ver_SH
         sudo cp $GITHUB_WORKSPACE/scripts/whoami ./
